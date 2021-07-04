@@ -1,0 +1,111 @@
+*{
+  	margin: 0px;
+  	padding: 0px;
+  	box-sizing: border-box;
+}
+/*heading */
+
+/*image slideshow*/
+.image_main_container
+{
+  position: relative;
+}
+.imagecontainer
+{
+  width: 100%;
+  border:50px outset rgb(128,0,0);
+  overflow-x: hidden;
+  margin-top: 5px;
+  overflow-y: hidden;
+  border-radius: 40px;
+  position: relative;
+}
+
+.imagebox
+{
+  width: 80%;
+  display: block;
+  margin: 0%;
+}
+.image
+{
+  height: 100%;
+  width: 100%;  
+}
+
+.imagebox
+{
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: margin 1s;
+  position: absolute;
+}
+.slideshowbtn
+{
+  position: absolute;
+  top:45%;
+  z-index: 1;
+  font-size: 50px;
+  color: white;
+  cursor: pointer;
+  animation-name: headerglow;
+ animation-iteration-count: infinite;
+ animation-direction: alternate;
+ animation-duration: 2s;
+}
+.slideshowbtn:hover
+{
+  font-size: 60px;
+  top:44%;
+}
+
+ /* CSS property for content section */ 
+.content1,.content2{ 
+    float: center;
+    width: 90%; 
+    padding: 15px; 
+    letter-spacing: 1px; 
+    line-height: 30px;
+} 
+h1{ 
+    color:green; 
+    text-align:center; 
+} 
+p{
+    font-family: georgia;
+    font-weight: bold;
+    font-size: medium;
+}
+
+/*responsive content*/
+@media screen and (max-width:450px) 
+{ 
+  .imagecontainer
+  {
+    border:10px solid black;
+  }
+  .image_main_container
+  {
+    background-color: black;
+  }
+  .content1,.content2
+  { 
+      width: 100%; 
+  } 
+  .header
+  {
+    top: 40%;
+  }
+  .header h2
+  {
+    font-size: 80px;
+  }   
+} 
+
+/*animations*/
+@keyframes headerglow
+{
+  from{color: white;text-shadow: 2px 2px 5px red,2px 2px 5px red,2px 2px 5px red,2px 2px 5px red;}
+  to{color: red;text-shadow: 2px 2px 5px white,2px 2px 5px white,2px 2px 5px white,2px 2px 5px white;}
+}
